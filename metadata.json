@@ -1,0 +1,6 @@
+{
+  "name": "CEO Pulse",
+  "description": "Premium executive analytics dashboard for multi-branch clinic networks, with real-time financial tracking, clinical performance, and PWA capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

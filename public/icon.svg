@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0E1A" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#22D3EE" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  
+  <!-- Subtle circular grid -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="rgba(99,102,241,0.15)" stroke-width="1.5" stroke-dasharray="6 6" />
+  <circle cx="256" cy="256" r="100" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1.5" />
+  
+  <!-- Clinic Cross & EKG Pulse Wave -->
+  <!-- Cross backglow -->
+  <path d="M236 120 h40 v86 h86 v40 h-86 v86 h-40 v-86 h-86 v-40 h86 z" fill="rgba(99,102,241,0.12)" />
+  
+  <!-- Glowing ECG Pulse line through center -->
+  <path d="M80 256 L180 256 L210 180 L235 320 L270 140 L300 360 L330 220 L350 256 L432 256" 
+        fill="none" 
+        stroke="url(#pulse)" 
+        stroke-width="18" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)" />
+        
+  <!-- Glowing nodes on heartbeat line -->
+  <circle cx="270" cy="140" r="10" fill="#22D3EE" filter="url(#glow)" />
+  <circle cx="300" cy="360" r="8" fill="#6366F1" filter="url(#glow)" />
+  <circle cx="350" cy="256" r="6" fill="#10B981" />
+</svg>
